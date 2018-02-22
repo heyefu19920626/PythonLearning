@@ -33,12 +33,32 @@ print(messages)
 
 
 # dictionries
-dictionries = {"x_point":5}
+dictionries = {
+	"x_point":5,
+	"z_point":7,
+	}
 print(dictionries)
 
 # add dictionries proterty
 dictionries["y_point"] = 6
 print(dictionries)
 
-#visit dictionries property
+# delete dictionaries properties
+del(dictionries["z_point"])
+print(dictionries)
+
+# visit dictionries property
 print("This dictionry x_point is " + str(dictionries["x_point"]) + ".")
+
+# traverse dictionaries by key-value
+for key,value in dictionries.items():
+	print("\n" + key)
+	print(value)
+
+# traverse dicrionaries by key
+# 1
+for key in dictionries:
+	print("\n" + key)
+#2
+for key in dictionries.keys():
+	print("\n" + str(dictionries[key]))
