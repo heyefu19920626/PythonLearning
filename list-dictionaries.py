@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 # Assagn a value to a list
 messages = [value for value in range(1, 10)]
 print(messages)
@@ -91,3 +93,4 @@ for alien in range(10):
 	aliens.append(alien_new)
 print("Total number if aliens:" + str(len(aliens)))
 print(aliens[:5])
+
