@@ -3,6 +3,7 @@
 import requests
 import re
 import random
+import platform
 
 def spiderPice(html,keyword):
 	print('loading...')
@@ -13,7 +14,10 @@ def spiderPice(html,keyword):
 		except requests.exceptions.ConnectionError:
 			print('requests error')
 			continue
-		fq = open('/home/IdeaWork/PythonLearning/' + str(random.randrange(0,1000,4)) + '.jpg','wb')
+		if platform.system().lower() == 'windows':
+			fq = open('img/' + str(random.randrange(0,1000,4)) + '.jpg','wb')
+		else:
+			fq = open('/home/IdeaWork/PythonLearning/img/' + str(random.randrange(0,1000,4)) + '.jpg','wb')
 		fq.write(pics.content)
 		fq.close()
 
