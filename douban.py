@@ -18,7 +18,10 @@ for page in range(10):
 	soup = BeautifulSoup(html.text,'html.parser')
 	soup = str(soup)
 	title = re.compile('<span class="title">(.*)</span>')
-	names = re.findall(title,soup)
-	for name in names:
-		if name.find('/') == -1:
-			print(name)
+	directors = re.compile('(导演:.*)主演')
+	for director in re.findall(directors,soup):
+		print(director)
+	# names = re.findall(title,soup)
+	# for name in names:
+	# 	if name.find('/') == -1:
+	# 		print(name)
