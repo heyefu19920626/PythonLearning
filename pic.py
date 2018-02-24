@@ -16,7 +16,7 @@ def spiderPice(html,keyword):
 			print('requests error')
 			continue
 		if platform.system().lower() == 'windows':
-			fq = open('img/' + str(index) + '.jpg','wb')
+			fq = open('images/' + str(index) + '.jpg','wb')
 		else:
 			fq = open('/home/IdeaWork/PythonLearning/img/' + str(random.randrange(0,1000,4)) + '.jpg','wb')
 		index += 1;
