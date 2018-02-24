@@ -7,6 +7,7 @@ import platform
 
 def spiderPice(html,keyword):
 	print('loading...')
+	index = 1
 	for addr in re.findall('"objURL":"(.*?)"',html,re.S):
 		print('crawling... ' + str(addr)[:30] + "...")
 		try:
@@ -15,9 +16,10 @@ def spiderPice(html,keyword):
 			print('requests error')
 			continue
 		if platform.system().lower() == 'windows':
-			fq = open('img/' + str(random.randrange(0,1000,4)) + '.jpg','wb')
+			fq = open('img/' + str(index) + '.jpg','wb')
 		else:
 			fq = open('/home/IdeaWork/PythonLearning/img/' + str(random.randrange(0,1000,4)) + '.jpg','wb')
+		index += 1;
 		fq.write(pics.content)
 		fq.close()
 
