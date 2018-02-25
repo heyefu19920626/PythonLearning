@@ -1,5 +1,14 @@
 
+# import modules
+import modules
+# import function in modules
 
+# from modulesFunction import test
+# call this function does not require this modules name
+from modulesFunction import test,test1
+
+# The keyword as is used to spectify an alias
+from modulesFunction import test2 as mf_test2
 
 # formal parameter and actual parameter
 # keyword actual parameter
@@ -33,3 +42,17 @@ def build_profile(first, last, **user_info):
 user_profile = build_profile('albert', 'enistein', loction='prinction', field='physics')
 print('**')
 print(user_profile)
+
+
+# use modules
+modules.use_modules()
+modules.test_moudles()
+
+# use modules function
+test()
+test1()
+# error
+# test2()
+# modulesFunction.test()
+
+mf_test2()
