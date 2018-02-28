@@ -1,4 +1,7 @@
 
+import json
+
+
 file_path = 'test.txt'
 
 # read the entire file
@@ -38,7 +41,7 @@ try:
 except Exception:
 	print('You can not divide by zero.')
 
-# try expect else
+# try expect pass else
 print('Give me two numbers,and i will divide them.\nEnter "q" to quit.')
 while True:
 	first_number = input('\nFirst number')
@@ -48,6 +51,18 @@ while True:
 	try:
 		answer = int(first_number)/int(secone_number)
 	except Exception:
-		print('You can not divide by zero.')
+		pass
 	else:
 		print(answer)
+
+
+
+# save data use json.dump()
+numbers = [1,2,3,4,5,6,7,8,9,0]
+with open('numbers.json','w') as file:
+	json.dump(numbers,file)
+
+# load data use json.load()
+with open('numbers.json') as file:
+	numbers_new  = json.load(file)
+print(numbers_new)
