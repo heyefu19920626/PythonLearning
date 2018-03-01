@@ -15,11 +15,13 @@ def run_game():
         ai_setting.screen_width, ai_setting.screen_height))
     pygame.display.set_caption('Alien Invasion')
     ship = Ship(screen)
+    bullets = []
 
     # start game main loop
     while True:
-        gf.check_events(ship)
+        gf.check_events(ship,screen,ai_setting,bullets)
         ship.update()
-        gf.update_screen(ai_setting, screen, ship)
+        gf.update_screen(ai_setting, screen, ship,bullets)
+
 
 run_game()
