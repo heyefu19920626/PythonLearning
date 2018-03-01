@@ -27,7 +27,7 @@ class Ship():
         self.screen.blit(self.image, self.rect)
 
     def update(self):
-        if self.moving_right and self.rect.centerx < 900:
+        if self.moving_right and self.rect.right < 900:
             self.rect.centerx += self.speed
-        if self.moving_left and self.rect.centerx > 0:
+        if self.moving_left and self.rect.left > 0:
             self.rect.centerx -= self.speed
