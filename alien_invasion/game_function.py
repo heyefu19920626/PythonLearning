@@ -17,10 +17,7 @@ def update_screen(ai_setting, screen, ship,bullets):
     # redraw the screen at each cycle
     screen.fill(ai_setting.bg_color)
     ship.blitme()
-    if bullets:
-        for bulleted in bullets:
-            # print(bulleted.rect.y)
-            bulleted.draw_bullet()
+    update_bullets(bullets)
     # let's recent paint screen is visibe
     pygame.display.flip()
 
@@ -39,3 +36,13 @@ def check_keyup_events(event, ship):
         ship.moving_right = False
     if event.key == pygame.K_LEFT:
         ship.moving_left = False
+
+def update_bullets(bullets):
+    if bullets:
+        for bulleted in bullets:
+            # print(bulleted.rect.y)
+            bulleted.update()
+            if bulleted.rect.bottom <= 0:
+                bullets.remove(bulleted)
+            else:
+                bulleted.draw_bullet()
