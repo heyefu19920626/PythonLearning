@@ -23,8 +23,6 @@ class RandomWalk():
             self.x_values.append(self.x_values[-1] + x_value)
             self.y_values.append(self.y_values[-1] + y_value)
 
-            self.num_points -= 1
-
     def get_value(self):
 
         dircection = choice([-1,1])
