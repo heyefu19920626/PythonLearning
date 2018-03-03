@@ -4,7 +4,7 @@ import random_walk
 
 
 
-rw = random_walk.RandomWalk()
+rw = random_walk.RandomWalk(1000000)
 rw.fill_walk()
 
 x_vaules = rw.x_values
