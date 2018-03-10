@@ -11,5 +11,6 @@ urlpatterns = [
 #    url(r'^$',view.index, name='index'),
     path('', views.index,name='index'),
     # show all theme
-    path('topics/', views.topics, name='topics')
+    path('topics/', views.topics, name='topics'),
+    path('^topics/(?P<topic_id>\d+)/$', views.topic,name='topic')
 ]
