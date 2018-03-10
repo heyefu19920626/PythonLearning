@@ -22,4 +22,7 @@ class Entry(models.Model):
 
     def __str__(self):
         """ return the string representation of the model """
-        return self.text[:50] + "..."
+        if len(self.text) > 50:
+            return self.text[:50] + "..."
+        else:
+            return self.text
