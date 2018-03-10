@@ -16,8 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls import include
+from learning_logs import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('learning_logs.urls'))
+    path('', include('learning_logs.urls')),
 ]
