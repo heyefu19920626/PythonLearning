@@ -1,7 +1,18 @@
-<p>
-    <a href="{% url 'learning_logs:index' %}">Learning Log</a>
-    <br>
-    <br>
-    <a href="{% url 'learning_logs:topics' %}">Topics</a>
-</p>
-{% block content %}{% endblock content %}
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>何野夫</title>
+    <meta name="keywords" content="何野夫,python,django">
+    <meta name="description" content="first django">
+    </head>
+    <body>
+        <p>
+            <a href="{% url 'learning_logs:index' %}">Learning Log</a>
+            <br>
+            <br>
+            <a href="{% url 'learning_logs:topics' %}">Topics</a>
+        </p>
+        {% block content %}{% endblock content %}
+    </body>
+</html>
