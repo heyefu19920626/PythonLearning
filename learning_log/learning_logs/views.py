@@ -12,6 +12,7 @@ def index(request):
     """ learn the home page for your notes """
     return render(request, 'learning_logs/index.html')
 
+
 @login_required
 def topics(request):
     """ show all themes """
@@ -20,6 +21,7 @@ def topics(request):
     return render(request, 'learning_logs/topics.html', context)
 
 
+@login_required
 def topic(request, topic_id):
     """ dispaly a single topic and all its entries """
     topic = Topic.objects.get(id=topic_id)
@@ -28,6 +30,7 @@ def topic(request, topic_id):
     return render(request, 'learning_logs/topic.html', context)
 
 
+@login_required
 def new_topic(request):
     """ add new topic """
     if request.method != 'POST':
@@ -43,6 +46,8 @@ def new_topic(request):
     context = {'form': form}
     return render(request, 'learning_logs/new_topic.html', context)
 
+
+@login_required
 def new_entry(request, topic_id):
     """ add new entries to a specific topic """
     topic = Topic.objects.get(id=topic_id)
@@ -57,4 +62,4 @@ def new_entry(request, topic_id):
             new_entry.save()
             return HttpResponseRedirect(reverse('learning_logs:topic', args=[topic_id]))
     context = {'topic': topic, 'form': form}
-    return render(request,'learning_logs/new_entry.html', context)
+    return render(request, 'learning_logs/new_entry.html', context)
