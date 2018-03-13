@@ -8,6 +8,6 @@ from django.contrib.auth import logout
 def logout_view(request):
     """ the cancellation of the user """
     logout(request)
-    #return HttpResponseRedirect(reverse('learning_logs:index'))
-    #return render(request, HttpResponseRedirect(reverse('learning_logs:index')))
+    return HttpResponseRedirect(reverse('learning_logs:index'))
+    # must return render
     return render(request, 'learning_logs/index.html')
