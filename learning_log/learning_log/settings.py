@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bootstrap3',
     # My Apps
     'learning_logs',
     'users',
@@ -124,3 +125,8 @@ STATIC_URL = '/static/'
 
 # My setting
 LOGIN_URL = '/users/login/'
+
+# django-bootstrap3 setting
+BOOTSTRAP3 = {
+    'inlcude_jauery': True,
+}
