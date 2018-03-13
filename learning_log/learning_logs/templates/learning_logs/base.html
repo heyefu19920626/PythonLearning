@@ -1,18 +1,19 @@
 {% load bootstrap3 %}
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>何野夫</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1, maxinum-scale=1, mininum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="何野夫,python,django">
     <meta name="description" content="first django">
+    <title>何野夫</title>
     {% bootstrap_css %}
     {% bootstrap_javascript %}
     </head>
     <body>
+
         <!-- Static navbar -->
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
@@ -22,11 +23,10 @@
                     <a class="navbar-brand" href="{% url 'learning_logs:index' %}">Learning Log</a>
                 </div>
 
-                <div id="navbar" class="navbar-collapse collapse">
+                <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="{% url 'learning_logs:topics' %}">Topics</a></li>
                     </ul>
-
                     <ul class="nav navbar-nav navbar-right">
                         {% if user.is_authenticated %}
                             <li><a>Hello, {{ user.username }}.</a></li>
@@ -50,18 +50,5 @@
                 {% block content %}{% endblock content %}
             </div>
             <!-- /container -->
-        <!--
-        <p>
-            <a href="{% url 'learning_logs:index' %}">Learning Log</a>
-            <br>
-            <br>
-            <a href="{% url 'learning_logs:topics' %}">Topics</a>
-            {% if user.is_authenticated %}
-                 - Hello,{{ user.username }} - <a href="{% url 'users:logout' %}">Logout</a>
-            {% else %}
-                <a href="{% url 'users:login' %}">Login</a> - <a href="{% url 'users:register' %}">Register</a>
-            {% endif %}
-        </p>
-    -->
     </body>
 </html>

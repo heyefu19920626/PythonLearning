@@ -128,5 +128,5 @@ LOGIN_URL = '/users/login/'
 
 # django-bootstrap3 setting
 BOOTSTRAP3 = {
-    'inlcude_jauery': True,
+    'include_jquery': True,
 }
