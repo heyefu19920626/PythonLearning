@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-15 01:41+0000\n"
+"POT-Creation-Date: 2018-03-15 05:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,77 +20,83 @@ msgstr ""
 
 #: learning_logs/templates/learning_logs/base.html:24
 msgid "Learning Log"
-msgstr ""
+msgstr "Learning Log"
 
 #: learning_logs/templates/learning_logs/base.html:29
 #: learning_logs/templates/learning_logs/topics.html:5
 msgid "Topics"
-msgstr ""
+msgstr "Topics"
 
 #: learning_logs/templates/learning_logs/base.html:33
 msgid "Hello"
-msgstr ""
+msgstr "Hello"
 
 #: learning_logs/templates/learning_logs/base.html:34
 msgid "Logout"
-msgstr ""
+msgstr "Logout"
 
 #: learning_logs/templates/learning_logs/base.html:36
 msgid "Register"
-msgstr ""
+msgstr "Register"
 
 #: learning_logs/templates/learning_logs/base.html:37
 msgid "Login"
-msgstr ""
+msgstr "Login"
 
 #: learning_logs/templates/learning_logs/edit_entry.html:10
 #: learning_logs/templates/learning_logs/topic.html:19
 msgid "Edit entry"
-msgstr ""
+msgstr "Edit entry"
 
 #: learning_logs/templates/learning_logs/edit_entry.html:17
 msgid "Save"
-msgstr ""
+msgstr "Save"
 
 #: learning_logs/templates/learning_logs/index.html:12
 msgid "Register an account"
-msgstr ""
+msgstr "Register an account"
 
 #: learning_logs/templates/learning_logs/index.html:12
-msgid ""
-"to make your own Learning Log, and list the topic you're learnning about."
-msgstr ""
+msgid "tomake"
+msgstr "to make your own Learning Log, and list the topic you're learnning about."
 
 #: learning_logs/templates/learning_logs/index.html:15
-msgid ""
-"Whenever you learn something new about a topic, make an entry summarizing "
-"what you've learned."
+msgid "Whenever"
+msgstr "Whenever you learn something new about a topic, make an entry summarizing what you've learned."
+
+#: learning_logs/templates/learning_logs/index.html:16
+msgid "testtrans"
 msgstr ""
 
 #: learning_logs/templates/learning_logs/new_entry.html:10
 msgid "Add a new entry"
-msgstr ""
+msgstr "Add a new entry"
 
 #: learning_logs/templates/learning_logs/new_entry.html:16
 msgid "Add entry"
-msgstr ""
+msgstr "Add entry"
+
+#: learning_logs/templates/learning_logs/new_topic.html:6
+#: learning_logs/templates/learning_logs/topics.html:22
+msgid "addnewtopic"
+msgstr "Add a new topic"
+
+#: learning_logs/templates/learning_logs/new_topic.html:17
+msgid "Add topic"
+msgstr "Add a new topic"
 
 #: learning_logs/templates/learning_logs/topic.html:10
 msgid "Entries"
-msgstr ""
+msgstr "Entries"
 
 #: learning_logs/templates/learning_logs/topic.html:11
 msgid "Add new entry"
-msgstr ""
+msgstr "Add new entry"
 
 #: learning_logs/templates/learning_logs/topic.html:29
 msgid "There are no entries for this topic yet."
-msgstr ""
+msgstr "There are no entries for this topic yet."
 
 #: learning_logs/templates/learning_logs/topics.html:18
 msgid "No topics have been added yet."
-msgstr ""
-
-#: learning_logs/templates/learning_logs/topics.html:22
-msgid "Add a new topic"
-msgstr ""
+msgstr "No topics have been added yet."

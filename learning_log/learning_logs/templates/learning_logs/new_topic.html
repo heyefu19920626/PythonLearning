@@ -1,8 +1,9 @@
 {% extends 'learning_logs/base.html' %}
 {% load bootstrap3 %}
+{% load i18n %}
 
 {% block header %}
-    <h2>Add a new topic:</h2>
+    <h2>{% trans 'addnewtopic' %}:</h2>
 {% endblock header %}
 
 {% block content %}
@@ -13,7 +14,7 @@
        {% bootstrap_form form %}
 
        {% buttons %}
-       <button name="submit" class="btn btn-primary">Add topic</button>
+       <button name="submit" class="btn btn-primary">{% trans 'Add topic' %}</button>
        {% endbuttons %}
     </form>
 
