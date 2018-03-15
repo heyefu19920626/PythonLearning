@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('learning_logs.urls')),
     path('users/', include('users.urls')),
+    path('i18n/', include('django.conf.urls.i18n')),
 ]

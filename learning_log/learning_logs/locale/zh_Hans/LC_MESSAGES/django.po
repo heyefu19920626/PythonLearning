@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-15 05:01+0000\n"
+"POT-Creation-Date: 2018-03-15 05:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,6 +52,10 @@ msgstr "编辑条目"
 msgid "Save"
 msgstr "保存"
 
+#: learning_logs/templates/learning_logs/index.html:6
+msgid "Track your learning."
+msgstr "跟踪你的学习."
+
 #: learning_logs/templates/learning_logs/index.html:12
 msgid "Register an account"
 msgstr "注册一个账号"
@@ -63,10 +67,6 @@ msgstr "制作你自己的学习日志，列出你正在学习的话题."
 #: learning_logs/templates/learning_logs/index.html:15
 msgid "Whenever"
 msgstr "无论什么时候，只要你学习了一个新的话题，就把你所学到的东西总结出来."
-
-#: learning_logs/templates/learning_logs/index.html:16
-msgid "testtrans"
-msgstr "测试翻译"
 
 #: learning_logs/templates/learning_logs/new_entry.html:10
 msgid "Add a new entry"
@@ -100,3 +100,4 @@ msgstr "这个主题下还没有建立条目."
 #: learning_logs/templates/learning_logs/topics.html:18
 msgid "No topics have been added yet."
 msgstr "还没有添加主题."
+

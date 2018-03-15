@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-15 05:02+0000\n"
+"POT-Creation-Date: 2018-03-15 05:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,21 +52,24 @@ msgstr "Edit entry"
 msgid "Save"
 msgstr "Save"
 
+#: learning_logs/templates/learning_logs/index.html:6
+msgid "Track your learning."
+msgstr "Track your learning."
+
 #: learning_logs/templates/learning_logs/index.html:12
 msgid "Register an account"
 msgstr "Register an account"
 
 #: learning_logs/templates/learning_logs/index.html:12
 msgid "tomake"
-msgstr "to make your own Learning Log, and list the topic you're learnning about."
+msgstr ""
+"to make your own Learning Log, and list the topic you're learnning about."
 
 #: learning_logs/templates/learning_logs/index.html:15
 msgid "Whenever"
-msgstr "Whenever you learn something new about a topic, make an entry summarizing what you've learned."
-
-#: learning_logs/templates/learning_logs/index.html:16
-msgid "testtrans"
 msgstr ""
+"Whenever you learn something new about a topic, make an entry summarizing "
+"what you've learned."
 
 #: learning_logs/templates/learning_logs/new_entry.html:10
 msgid "Add a new entry"
