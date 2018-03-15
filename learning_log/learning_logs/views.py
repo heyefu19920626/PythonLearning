@@ -1,8 +1,10 @@
+from urllib.parse import unquote
 from django.shortcuts import render
 from django.http import HttpResponseRedirect, Http404
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from django.utils.translation import LANGUAGE_SESSION_KEY
+from django.utils.http import is_safe_url
 
 from .models import Topic, Entry
 from .forms import TopicForm, EntryForm
@@ -103,4 +105,13 @@ def change_language(request,language):
             path=settings.LANGUAGE_COOKIE_PATH,
             domain=settings.LANGUAGE_COOKIE_DOMAIN,
         )
-    return HttpResponseRedirect(reverse('learning_logs:index'))
+    next = request.POST.get('next', request.GET.get('next'))
+    if ((next or not request.is_ajax()) and
+            not is_safe_url(url=next, allowed_hosts={request.get_host()}, require_https=request.is_secure())):
+        next = request.META.get('HTTP_REFERER')
+        if next:
+            next = unquote(next)  # HTTP_REFERER may be encoded.
+        if not is_safe_url(url=next, allowed_hosts={request.get_host()}, require_https=request.is_secure()):
+            next = '/'
+    response = HttpResponseRedirect(next) if next else HttpResponse(status=204)
+    return response
