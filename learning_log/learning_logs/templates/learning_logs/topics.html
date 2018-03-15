@@ -1,7 +1,8 @@
 {% extends 'learning_logs/base.html' %}
+{% load i18n %}
 
 {% block header %}
-    <h1>Topics</h1>
+    <h1>{% trans 'Topics' %}</h1>
 {% endblock header %}
 
 {% block content %}
@@ -14,10 +15,10 @@
             </h3>        
         </li>
         {% empty %}
-            <li> No topics have been added yet.</li>
+            <li> {% trans 'No topics have been added yet.' %}</li>
         {% endfor %}
     </ul>
 
-    <h3><a href="{% url 'learning_logs:new_topic' %}">Add a new topic:</a></h3>
+    <h3><a href="{% url 'learning_logs:new_topic' %}">{% trans 'Add a new topic' %}:</a></h3>
     
 {% endblock content %}

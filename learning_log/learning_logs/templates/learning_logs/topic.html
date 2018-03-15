@@ -1,4 +1,5 @@
 {% extends 'learning_logs/base.html' %}
+{% load i18n %}
 
 {% block header %}
     <h2>{{ topic }}</h2>
@@ -6,8 +7,8 @@
 
 {% block content %}
 
-<p>Entries:</p>
-<p><a href="{% url 'learning_logs:new_entry' topic.id %}">Add new entry</a></p>
+<p>{% trans 'Entries' %}:</p>
+<p><a href="{% url 'learning_logs:new_entry' topic.id %}">{% trans 'Add new entry' %}</a></p>
 
     {% for entry in entries %}
     <div class="panel panel-default">
@@ -15,7 +16,7 @@
             <h3>
                 {{ entry.date_added|date:'M d, Y H:i' }}
                 <small>
-                    <a href="{% url 'learning_logs:edit_entry' entry.id %}">Edit entry</a>
+                    <a href="{% url 'learning_logs:edit_entry' entry.id %}">{% trans 'Edit entry'  %}</a>
                 </small>
             </h3>
         </div>
@@ -25,7 +26,7 @@
     </div>
     <!-- panel -->
     {% empty %}
-        There are no entries for this topic yet.
+        {% trans 'There are no entries for this topic yet.' %}
     {% endfor %}
 
 {% endblock content %}

@@ -1,8 +1,9 @@
 {% extends 'learning_logs/base.html' %}
 {% load bootstrap3 %}
+{% load i18n %}
 
 {% block header %}
-    <h2>Register your account</h2>
+    <h2>{% trans 'Register your account' %}</h2>
 {% endblock header%}
 
 {% block content %}
@@ -12,7 +13,7 @@
     {% bootstrap_form form %}
 
     {% buttons %}
-    <button name="submit" class="btn btn-primary">Register</button>
+    <button name="submit" class="btn btn-primary">{% trans 'Register' %}</button>
     {% endbuttons %}
     <input type="hidden" name="next" value="{% url 'learning_logs:index' %}">
 </form>
