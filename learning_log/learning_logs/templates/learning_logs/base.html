@@ -36,7 +36,8 @@
                             <li><a href="{% url 'users:register' %}">{% trans 'Register' %}</a></li>
                             <li><a href="{% url 'users:login' %}">{% trans 'Login' %}</a></li>
                         {% endif %}
-                            <li>
+                            <!-- <li><a>{% trans 'Setting' %}<a></li> -->
+                                <!--
                                 <form class="form" action="{% url 'set_language' %}" method="post">
                                     {% csrf_token %}
                                     <input name="next" type="hidden" value="{{ redirect_to }}"/>
@@ -48,7 +49,7 @@
                                     </select>
                                     <input type="submit" value="Go"/>
                                 </form>
-                            </li>
+                            -->
                    </ul>
                 </div>
                 <!--  /.nav-collapse -->
