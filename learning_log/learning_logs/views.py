@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect, Http404
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
+from django.utils.translation import LANGUAGE_SESSION_KEY
 
 from .models import Topic, Entry
 from .forms import TopicForm, EntryForm
@@ -88,3 +89,18 @@ def edit_entry(request, entry_id):
 
     context = {'entry': entry, 'topic': topic, 'form': form}
     return render(request, 'learning_logs/edit_entry.html', context)
+
+
+def change_language(request,language):
+    """ change user's language """
+    lang_code = language
+    if hasattr(request, 'session'):
+        request.session[LANGUAGE_SESSION_KEY] = lang_code
+    else:
+        response.set_cookie(
+            settings.LANGUAGE_COOKIE_NAME, lang_code,
+            max_age=settings.LANGUAGE_COOKIE_AGE,
+            path=settings.LANGUAGE_COOKIE_PATH,
+            domain=settings.LANGUAGE_COOKIE_DOMAIN,
+        )
+    return HttpResponseRedirect(reverse('learning_logs:index'))

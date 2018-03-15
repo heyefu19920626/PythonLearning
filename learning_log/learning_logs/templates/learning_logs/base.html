@@ -59,7 +59,7 @@
                                     <a>{% trans 'Language' %}</a>
                                     <ul class="dropdown-menu">
                                         {% for language in LANGUAGES %}
-                                        <li><a>{{ language.1 }}</a></li>
+                                        <li><a href="{% url 'learning_logs:change_language' language.0 %}">{{ language.1 }}</a></li>
                                         {% endfor %}
                                     </ul>
                                 </li>
