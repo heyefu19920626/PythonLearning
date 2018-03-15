@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-15 05:57+0000\n"
+"POT-Creation-Date: 2018-03-15 11:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,30 +18,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: learning_logs/templates/learning_logs/base.html:24
+#: learning_logs/templates/learning_logs/base.html:39
 msgid "Learning Log"
 msgstr "学习笔记"
 
-#: learning_logs/templates/learning_logs/base.html:29
+#: learning_logs/templates/learning_logs/base.html:44
 #: learning_logs/templates/learning_logs/topics.html:5
 msgid "Topics"
 msgstr "主题"
 
-#: learning_logs/templates/learning_logs/base.html:33
+#: learning_logs/templates/learning_logs/base.html:48
 msgid "Hello"
 msgstr "你好"
 
-#: learning_logs/templates/learning_logs/base.html:34
+#: learning_logs/templates/learning_logs/base.html:49
 msgid "Logout"
 msgstr "注销"
 
-#: learning_logs/templates/learning_logs/base.html:36
+#: learning_logs/templates/learning_logs/base.html:51
 msgid "Register"
 msgstr "注册"
 
-#: learning_logs/templates/learning_logs/base.html:37
+#: learning_logs/templates/learning_logs/base.html:52
 msgid "Login"
 msgstr "登录"
+
+#: learning_logs/templates/learning_logs/base.html:56
+msgid "Setting"
+msgstr "设置"
+
+#: learning_logs/templates/learning_logs/base.html:59
+msgid "Language"
+msgstr "语言"
 
 #: learning_logs/templates/learning_logs/edit_entry.html:10
 #: learning_logs/templates/learning_logs/topic.html:19
@@ -68,11 +76,11 @@ msgstr "制作你自己的学习日志，列出你正在学习的话题."
 msgid "Whenever"
 msgstr "无论什么时候，只要你学习了一个新的话题，就把你所学到的东西总结出来."
 
-#: learning_logs/templates/learning_logs/new_entry.html:10
+#: learning_logs/templates/learning_logs/new_entry.html:11
 msgid "Add a new entry"
 msgstr "添加新条目"
 
-#: learning_logs/templates/learning_logs/new_entry.html:16
+#: learning_logs/templates/learning_logs/new_entry.html:17
 msgid "Add entry"
 msgstr "添加新条目"
 
@@ -100,4 +108,3 @@ msgstr "这个主题下还没有建立条目."
 #: learning_logs/templates/learning_logs/topics.html:18
 msgid "No topics have been added yet."
 msgstr "还没有添加主题."
-

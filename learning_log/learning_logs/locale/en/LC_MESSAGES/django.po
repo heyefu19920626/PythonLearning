@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-15 05:58+0000\n"
+"POT-Creation-Date: 2018-03-15 11:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,30 +18,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: learning_logs/templates/learning_logs/base.html:24
+#: learning_logs/templates/learning_logs/base.html:39
 msgid "Learning Log"
 msgstr "Learning Log"
 
-#: learning_logs/templates/learning_logs/base.html:29
+#: learning_logs/templates/learning_logs/base.html:44
 #: learning_logs/templates/learning_logs/topics.html:5
 msgid "Topics"
 msgstr "Topics"
 
-#: learning_logs/templates/learning_logs/base.html:33
+#: learning_logs/templates/learning_logs/base.html:48
 msgid "Hello"
 msgstr "Hello"
 
-#: learning_logs/templates/learning_logs/base.html:34
+#: learning_logs/templates/learning_logs/base.html:49
 msgid "Logout"
 msgstr "Logout"
 
-#: learning_logs/templates/learning_logs/base.html:36
+#: learning_logs/templates/learning_logs/base.html:51
 msgid "Register"
 msgstr "Register"
 
-#: learning_logs/templates/learning_logs/base.html:37
+#: learning_logs/templates/learning_logs/base.html:52
 msgid "Login"
 msgstr "Login"
+
+#: learning_logs/templates/learning_logs/base.html:56
+msgid "Setting"
+msgstr "Setting"
+
+#: learning_logs/templates/learning_logs/base.html:59
+msgid "Language"
+msgstr "Language"
 
 #: learning_logs/templates/learning_logs/edit_entry.html:10
 #: learning_logs/templates/learning_logs/topic.html:19
@@ -71,11 +79,11 @@ msgstr ""
 "Whenever you learn something new about a topic, make an entry summarizing "
 "what you've learned."
 
-#: learning_logs/templates/learning_logs/new_entry.html:10
+#: learning_logs/templates/learning_logs/new_entry.html:11
 msgid "Add a new entry"
 msgstr "Add a new entry"
 
-#: learning_logs/templates/learning_logs/new_entry.html:16
+#: learning_logs/templates/learning_logs/new_entry.html:17
 msgid "Add entry"
 msgstr "Add entry"
 
