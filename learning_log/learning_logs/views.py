@@ -1,6 +1,6 @@
 from urllib.parse import unquote
 from django.shortcuts import render
-from django.http import HttpResponseRedirect, Http404
+from django.http import HttpResponseRedirect, Http404, HttpResponse
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from django.utils.translation import LANGUAGE_SESSION_KEY
