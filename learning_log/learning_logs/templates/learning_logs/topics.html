@@ -12,6 +12,7 @@
         <li>
             <h3>
             <a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a>
+            <small><a class="a-right" href="{% url 'learning_logs:delete_topic' topic.id %}">{% trans 'Delete topic' %}</a></small>
             </h3>        
         </li>
         {% empty %}

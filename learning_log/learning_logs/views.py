@@ -75,6 +75,7 @@ def new_entry(request, topic_id):
     context = {'topic': topic, 'form': form}
     return render(request, 'learning_logs/new_entry.html', context)
 
+
 @login_required
 def edit_entry(request, entry_id):
     """ edit entry """
@@ -92,8 +93,22 @@ def edit_entry(request, entry_id):
     context = {'entry': entry, 'topic': topic, 'form': form}
     return render(request, 'learning_logs/edit_entry.html', context)
 
+def delete_topic(request, topic_id):
+    """ delete topic """
+    topic = Topic.objects.get(id=topic_id)
+    topic.delete()
+    return HttpResponseRedirect(reverse('learning_logs:topics'))
 
-def change_language(request,language):
+@login_required
+def delete_entry(request, entry_id):
+    """ delete entry """
+    entry = Entry.objects.get(id=entry_id)
+    topic = entry.topic
+    entry.delete()
+    return HttpResponseRedirect(reverse('learning_logs:topic', args=[topic.id]))
+
+
+def change_language(request, language):
     """ change user's language """
     lang_code = language
     if hasattr(request, 'session'):

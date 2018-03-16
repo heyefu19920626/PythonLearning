@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-15 11:26+0000\n"
+"POT-Creation-Date: 2018-03-16 04:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -85,7 +85,7 @@ msgid "Add entry"
 msgstr "添加新条目"
 
 #: learning_logs/templates/learning_logs/new_topic.html:6
-#: learning_logs/templates/learning_logs/topics.html:22
+#: learning_logs/templates/learning_logs/topics.html:23
 msgid "addnewtopic"
 msgstr "添加新主题"
 
@@ -101,10 +101,18 @@ msgstr "条目"
 msgid "Add new entry"
 msgstr "添加新条目"
 
-#: learning_logs/templates/learning_logs/topic.html:29
+#: learning_logs/templates/learning_logs/topic.html:20
+msgid "Delete entry"
+msgstr "删除条目"
+
+#: learning_logs/templates/learning_logs/topic.html:30
 msgid "There are no entries for this topic yet."
 msgstr "这个主题下还没有建立条目."
 
-#: learning_logs/templates/learning_logs/topics.html:18
+#: learning_logs/templates/learning_logs/topics.html:15
+msgid "Delete topic"
+msgstr "删除主题"
+
+#: learning_logs/templates/learning_logs/topics.html:19
 msgid "No topics have been added yet."
 msgstr "还没有添加主题."
