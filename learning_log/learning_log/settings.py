@@ -133,6 +133,10 @@ LOCALE_PATH = (
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIR = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
 # My setting
 LOGIN_URL = '/users/login/'
 
