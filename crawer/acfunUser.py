@@ -21,7 +21,7 @@ def get_user_info(uid, user_json):
             comeFrom = ''
 
         user_info = {'UID': uid, 'name':username, 'regTime': regTime, 'lastLoginIp':lastLoginIp, 'lastLoginDate':lastLoginDate, 'comeFrom': comeFrom}
-        # print(get_user_info)
+        print(user_info)
         with open('acfun_user.json', 'a') as file:
             json.dump(user_info, file)
 
