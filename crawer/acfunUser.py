@@ -12,6 +12,7 @@ def get_user_info(uid, user_json):
     if 'userjson' in user_json.keys():
         user_info = user_json['userjson']
         username = user_info['name']
+        regTime = user_info['regTime']
         lastLoginIp = user_info['lastLoginIp']
         lastLoginDate = user_info['lastLoginDate']
         if 'comeFrom' in user_info.keys():
@@ -19,16 +20,14 @@ def get_user_info(uid, user_json):
         else:
             comeFrom = ''
 
-        print('用户UID:' + str(uid), '用户昵称:' + username, '最近登录IP:' +
-              lastLoginIp, '最近登录日期:' + lastLoginDate, ' 来自:' + comeFrom)
-        user_info = {'UID': uid, 'name':username, 'lastLoginIp':lastLoginIp, 'lastLoginDate':lastLoginDate, 'comeFrom': comeFrom}
-        print(user_info)
+        user_info = {'UID': uid, 'name':username, 'regTime': regTime, 'lastLoginIp':lastLoginIp, 'lastLoginDate':lastLoginDate, 'comeFrom': comeFrom}
+        # print(get_user_info)
         with open('acfun_user.json', 'a') as file:
             json.dump(user_info, file)
 
         is_over = 0
     else:
-        print('用户UID:' + str(uid), '用户状态:' + user_json['result'])
+        # print('用户UID:' + str(uid), '用户状态:' + user_json['result'])
         if user_json['result'] == '用户不存在null':
             is_over += 1
 
@@ -44,7 +43,7 @@ for i in range(1, 10):
     try:
         user_json = json.loads(jsontext)
     except:
-        print("用户UID:" + str(i) + "请求状态:请求页面错误")
+        # print("用户UID:" + str(i) + "请求状态:请求页面错误")
         continue
 
     get_user_info(i, user_json)
