@@ -35,6 +35,9 @@ def get_user_info(uid, user_json):
             with open('error_log.log', 'a', encoding='utf-8') as file:
                 file.write("用户UID:" + str(uid) + "请用户状态:" + user_json['result'] + "\n")
             is_over += 1
+        else:
+            with open('error_log.log', 'a', encoding='utf-8') as file:
+                file.write("用户UID:" + str(uid) + "请用户状态:" + user_json['result'] + "\n")
 
 
 for i in range(1, 100000000):
