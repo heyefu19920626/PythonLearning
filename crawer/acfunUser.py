@@ -29,7 +29,7 @@ def get_user_info(uid, user_json):
             is_over += 1
 
 
-for i in range(11613821, 11613999):
+for i in range(1, 10):
     # print(is_over)
     if is_over > 100:
         break
@@ -41,5 +41,6 @@ for i in range(11613821, 11613999):
         user_json = json.loads(jsontext)
     except:
         print("用户UID:" + str(i) + "请求状态:请求页面错误")
+        continue
 
     get_user_info(i, user_json)
