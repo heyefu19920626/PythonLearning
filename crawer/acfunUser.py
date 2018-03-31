@@ -2,9 +2,8 @@ import requests
 import json
 
 
-
 # 用来判断是否后面是否还有用户
-is_over = 0 
+is_over = 0
 
 
 def get_user_info(uid, user_json):
@@ -17,11 +16,16 @@ def get_user_info(uid, user_json):
         lastLoginDate = user_info['lastLoginDate']
         if 'comeFrom' in user_info.keys():
             comeFrom = user_info['comeFrom']
-            print("用户UID:" + str(uid) + " 用户昵称:" + username + " 最近登录IP :" +
-                  lastLoginIp + " 最近登录日期:" + lastLoginDate + "来自:" + comeFrom)
         else:
-            print('用户UID:' + str(uid), '用户昵称:' + username, '最近登录IP:' +
-                  lastLoginIp, '最近登录日期:' + lastLoginDate, ' 来自:' + "未知")
+            comeFrom = ''
+
+        print('用户UID:' + str(uid), '用户昵称:' + username, '最近登录IP:' +
+              lastLoginIp, '最近登录日期:' + lastLoginDate, ' 来自:' + comeFrom)
+        user_info = {'UID': uid, 'name':username, 'lastLoginIp':lastLoginIp, 'lastLoginDate':lastLoginDate, 'comeFrom': comeFrom}
+        print(user_info)
+        with open('acfun_user.json', 'a') as file:
+            json.dump(user_info, file)
+
         is_over = 0
     else:
         print('用户UID:' + str(uid), '用户状态:' + user_json['result'])
