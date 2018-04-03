@@ -20,12 +20,10 @@ def get_ticket():
 
 with open("state_name.txt", encoding="utf-8") as file:
     state_info = file.read()
-state_infos = state_info.split("@")
-del state_infos[0]
 state_name_code = {}
-for state_info in state_infos:
-    state_detailes = state_info.split("|")
-    state_name_code[state_detailes[2]] = state_detailes[1]
+for state_info in state_info.split("@")[1:]:
+    state_details = state_info.split("|")
+    state_name_code[state_details[2]] = state_details[1]
 print(state_name_code)
 with open("state_name_code.json", "a", encoding="utf-8") as file:
     json.dump(state_name_code, file, ensure_ascii=False)
